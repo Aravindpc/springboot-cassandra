@@ -1,0 +1,17 @@
+docker-compose up
+docker exec -it df7dfd89c248 bash
+cqlsh
+create keyspace mykeyspace with replication ={'class':SimpleStrategy','replication_factor':1};
+use mykeyspace;
+CREATE TABLE mykeyspace.bank (bank_id int PRIMARY KEY, bank_identification_code text,bank_name text,bank_reg_number text,checker_date timestamp,checker_id text,country text,maker_date timestamp,maker_id text,modified_by text,modified_date timestamp,registered_address text);
+
+
+
+
+For number of nodes:
+use system;
+describe tables;
+select * from peers;
+
+
+

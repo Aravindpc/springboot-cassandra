@@ -1,0 +1,8 @@
+spring:
+    data:
+        cassandra:
+             keyspace-name:mykeyspace
+             schema-action:CREATE_IF_NOT_EXISTS
+             contact-points:mycassandra
+             entity-base-package:com.java.model
+             port:9042
